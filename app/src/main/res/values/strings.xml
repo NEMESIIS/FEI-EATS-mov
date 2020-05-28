@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">FEI-EATS-mov</string>
+    <string name="app_name">FEI-EATS</string>
+    <string name="login">Inicio de Sesión</string>
+
+
+    <string-array name="rol">
+        <item>Usuario</item>
+        <item>Vendedor</item>
+    </string-array>
+
+    <string-array name="categoria">
+        <item>Dulces</item>
+        <item>Comida</item>
+    </string-array>
 </resources>

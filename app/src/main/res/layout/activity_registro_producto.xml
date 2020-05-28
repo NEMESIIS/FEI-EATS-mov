@@ -64,6 +64,7 @@
         android:id="@+id/spCategoriaP"
         android:layout_width="211dp"
         android:layout_height="42dp"
+        android:entries="@array/categoria"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
