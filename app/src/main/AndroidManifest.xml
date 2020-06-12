@@ -20,6 +20,9 @@
         <activity android:name=".ActivityUsuario"/>
         <activity android:name=".ActivityUsuario2" />
         <activity android:name=".ActivityDefault"/>
+        <activity android:name=".ActivityDefault2"/>
+        <activity android:name=".ActivityProducto"/>
+
 
     </application>
 

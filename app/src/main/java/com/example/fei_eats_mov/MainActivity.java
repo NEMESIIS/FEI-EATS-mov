@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
        //obtención de referencias
-        etUsuario = (EditText) findViewById(R.id.etUsuario);
-        etContra = (EditText) findViewById(R.id.etContra);
-        btnIniciar = (Button) findViewById(R.id.btnIniciar);
+        etUsuario = findViewById(R.id.etUsuario);
+        etContra = findViewById(R.id.etContra);
+        btnIniciar = findViewById(R.id.btnIniciar);
 
         //Obtener instancia de autenticación firebase
         auth = FirebaseAuth.getInstance();
@@ -87,6 +87,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent registrar = new Intent(MainActivity.this, ActivityUsuario.class);
                 startActivity(registrar);
+                finish();
+            }
+        });
+
+        //Regristro de producto prueba
+        final TextView  txtRegistrar2 = findViewById(R.id.txtRegistrar2);
+
+        txtRegistrar2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registrar2 = new Intent(MainActivity.this, ActivityDefault.class);
+                startActivity(registrar2);
                 finish();
             }
         });
