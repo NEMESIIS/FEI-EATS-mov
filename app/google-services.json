@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "211541257952",
+    "firebase_url": "https://dulces-d61f6.firebaseio.com",
+    "project_id": "dulces-d61f6",
+    "storage_bucket": "dulces-d61f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211541257952:android:caa6b1dd789d737ab02a85",
+        "android_client_info": {
+          "package_name": "com.example.fei_eats_mov"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211541257952-a0n96d6ppsbs8h724ckcunbefuftmsvv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3EBI-6FwUUOEUar0kLE7p3COOOddIzGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211541257952-a0n96d6ppsbs8h724ckcunbefuftmsvv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
