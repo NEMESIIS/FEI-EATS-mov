@@ -22,6 +22,8 @@
         <activity android:name=".ActivityDefault"/>
         <activity android:name=".ActivityDefault2"/>
         <activity android:name=".ActivityProducto"/>
+        <activity android:name=".ActivityPrincipal"/>
+        <activity android:name=".ActivityPerfil"/>
 
 
     </application>

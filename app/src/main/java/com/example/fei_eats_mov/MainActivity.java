@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                         .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                      Intent intent = new Intent(MainActivity.this, ActivityDefault.class);
+                      Intent intent = new Intent(MainActivity.this, ActivityPrincipal.class);
                       startActivity(intent);
                       finish();
                             }
@@ -91,17 +91,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Regristro de producto prueba
-        final TextView  txtRegistrar2 = findViewById(R.id.txtRegistrar2);
 
-        txtRegistrar2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent registrar2 = new Intent(MainActivity.this, ActivityDefault.class);
-                startActivity(registrar2);
-                finish();
-            }
-        });
 
     }
 }
