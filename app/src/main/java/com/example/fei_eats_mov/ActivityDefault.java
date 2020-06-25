@@ -79,7 +79,7 @@ public class ActivityDefault extends AppCompatActivity {
                         //--Aquí va el apartado de la imagen
 
 
-                        mMensajesList2.add(new MensajeV(nombre,usuario,celular));
+                        mMensajesList2.add(new MensajeV("Nombre:  "+nombre,"Usuario:  "+usuario,"Celular:  "+celular));
 
                     }
 

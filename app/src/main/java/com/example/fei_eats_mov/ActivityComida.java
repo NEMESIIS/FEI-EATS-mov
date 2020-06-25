@@ -80,7 +80,7 @@ public class ActivityComida extends AppCompatActivity {
                         //--Aquí va el apartado de la imagen
 
 
-                        mMensajesList.add(new Mensaje(nombre, precio,descripcion));
+                        mMensajesList.add(new Mensaje("Producto:  "+nombre, "Precio:   $ "+precio,descripcion));
 
                     }
 
