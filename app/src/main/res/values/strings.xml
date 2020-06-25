@@ -12,4 +12,6 @@
         <item>Dulces</item>
         <item>Comida</item>
     </string-array>
+
+    <string name="foto_de_producto">FOTO DE PRODUCTO</string>
 </resources>

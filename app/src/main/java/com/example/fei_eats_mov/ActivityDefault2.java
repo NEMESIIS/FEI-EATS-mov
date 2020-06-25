@@ -1,10 +1,12 @@
 package com.example.fei_eats_mov;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -34,12 +36,12 @@ public class ActivityDefault2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_productos);
 
-        ddulces = FirebaseDatabase.getInstance().getReference();
-        Query query = ddulces.child("Productos");
+        //ddulces = FirebaseDatabase.getInstance().getReference();
+        //Query query = ddulces.child("Productos");
 
-        viewlista = (ListView)findViewById(R.id.listProductos);
-        listastrings= new ArrayList<String>(0);
-
+       // viewlista = (ListView)findViewById(R.id.listProductos);
+        //listastrings= new ArrayList<String>(0);
+/*
         query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -67,7 +69,76 @@ public class ActivityDefault2 extends AppCompatActivity {
 
             }
         });
+*/
+        //---------Inicia apartado de botones
 
+
+        //---Ver Categoria dulces
+        final TextView txtDulces = findViewById(R.id.txtDulces);
+
+        txtDulces.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registrar = new Intent(ActivityDefault2.this, ActivityDulces.class);
+                startActivity(registrar);
+                finish();
+            }
+        });
+        //--Ver perfil imagen
+        @SuppressLint("WrongViewCast") final ImageView imgDulces = findViewById(R.id.imgDulces);
+
+        imgDulces.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registrar = new Intent(ActivityDefault2.this, ActivityDulces.class);
+                startActivity(registrar);
+                finish();
+            }
+        });
+        //---------Ver categoria Comida
+        final TextView txtComida = findViewById(R.id.txtComida);
+
+        txtComida.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registrar = new Intent(ActivityDefault2.this, ActivityComida.class);
+                startActivity(registrar);
+                finish();
+            }
+        });
+        //--Ver perfil imagen
+        @SuppressLint("WrongViewCast") final ImageView imgComida = findViewById(R.id.imgComida);
+
+        imgComida.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registrar = new Intent(ActivityDefault2.this, ActivityComida.class);
+                startActivity(registrar);
+                finish();
+            }
+        });
+        //---------Ver categoria Todos
+        final TextView txtTodos = findViewById(R.id.txtTodos);
+
+        txtTodos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registrar = new Intent(ActivityDefault2.this, ActivityTodos.class);
+                startActivity(registrar);
+                finish();
+            }
+        });
+        //--Ver perfil imagen
+        @SuppressLint("WrongViewCast") final ImageView imgTodos = findViewById(R.id.imgTodos);
+
+        imgTodos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registrar = new Intent(ActivityDefault2.this, ActivityTodos.class);
+                startActivity(registrar);
+                finish();
+            }
+        });
         //Botón Regresar
         final Button  btnRegresar2 = findViewById(R.id.btnRegresar2);
 
