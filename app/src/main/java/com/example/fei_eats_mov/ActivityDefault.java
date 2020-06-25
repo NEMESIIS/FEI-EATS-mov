@@ -41,6 +41,8 @@ public class ActivityDefault extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //para menú contextual
+
         setContentView(R.layout.activity_usuarios);
         mRecyclerView2 = findViewById(R.id.recyclerViewVendedores);
 

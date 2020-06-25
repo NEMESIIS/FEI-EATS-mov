@@ -1,8 +1,10 @@
 package com.example.fei_eats_mov.productos.adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,7 +16,7 @@ import com.example.fei_eats_mov.productos.MensajeV;
 
 import java.util.ArrayList;
 
-public class MensajeAdapterV extends RecyclerView.Adapter<MensajeAdapterV.ViewHolder> {
+public class MensajeAdapterV extends RecyclerView.Adapter<MensajeAdapterV.ViewHolder>{
     private int resource2;
     private ArrayList<MensajeV>mensajesList2;
 
@@ -38,26 +40,44 @@ public class MensajeAdapterV extends RecyclerView.Adapter<MensajeAdapterV.ViewHo
         viewHolderv.textViewMensajeV2.setText(mensajev.getUsuario());
         viewHolderv.textViewMensajeV3.setText(mensajev.getCelular());
 
+
+
+
     }
+
+
 
     @Override
     public int getItemCount() {
         return mensajesList2.size();
     }
 
+
+
     public class  ViewHolder extends RecyclerView.ViewHolder{
+        //Contexto
+        Context context;
+
         private TextView textViewMensajeV1;
         private TextView textViewMensajeV2;
         private TextView textViewMensajeV3;
+
+        //para botón
+       // Button btnLlamada;
         //private ImageView Imagen;
         public View view2;
 
         public ViewHolder(View view2){
             super(view2);
             this.view2 = view2;
+            //Para el botón - llamada
+            context = view2.getContext();
             this.textViewMensajeV1 = view2.findViewById(R.id.textViewMensajeV1);
             this.textViewMensajeV2 = view2.findViewById(R.id.textViewMensajeV2);
             this.textViewMensajeV3 = view2.findViewById(R.id.textViewMensajeV3);
+
+            //Para botón
+            //this.btnLlamada = view2.findViewById(R.id.btnLlamada);
             // this.Imagen =view.findViewById(R.id.imgProducto);
 
         }
