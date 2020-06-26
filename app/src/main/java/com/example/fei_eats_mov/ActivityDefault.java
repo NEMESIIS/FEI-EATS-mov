@@ -7,6 +7,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.SearchView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -37,6 +39,7 @@ public class ActivityDefault extends AppCompatActivity {
     private ArrayList<MensajeV> mMensajesList2 = new ArrayList<>();
     // private ProductoModelo mAdapter;
     private RecyclerView mRecyclerView2;
+   // private SearchView searchView;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,6 +52,8 @@ public class ActivityDefault extends AppCompatActivity {
         //Referencias
         dvendedores = FirebaseDatabase.getInstance().getReference();
         getMensajesFromFirebase();
+        //para barra de bùsquedas
+       // searchView = findViewById(R.id.search);
 
 
         //--------Botón Regresar a Actividad Pantalla Principal
@@ -63,6 +68,17 @@ public class ActivityDefault extends AppCompatActivity {
             }
         });
         //-------Termina apartado de botón
+        //-----ver vendedores texto
+        final TextView txtVendedores = findViewById(R.id.txtBuscarV);
+
+        txtVendedores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registrar = new Intent(ActivityDefault.this, ActivityUsuario2.class);
+                startActivity(registrar);
+                finish();
+            }
+        });
     }
     //-----------Método getMensajesFromFirebase
     private void getMensajesFromFirebase(){
@@ -93,7 +109,11 @@ public class ActivityDefault extends AppCompatActivity {
 
             }
         });
-    }
+
+
+    }//fin del onCreate
+
+
 
 
 }
