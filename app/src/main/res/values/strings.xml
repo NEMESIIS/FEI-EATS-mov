@@ -35,4 +35,5 @@
     <string name="contrase_a">Contraseña</string>
     <string name="editar_foto">Editar Foto</string>
     <string name="eliminar_perfil">Eliminar perfil</string>
+    <string name="contrase_a1">Contraseña : *****</string>
 </resources>
