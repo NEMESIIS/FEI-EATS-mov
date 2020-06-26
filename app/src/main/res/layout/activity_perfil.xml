@@ -59,7 +59,7 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/contrase_a"
+        android:text="@string/contrase_a1"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"
@@ -70,14 +70,14 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="133dp"
-        android:layout_height="100dp"
+        android:layout_width="121dp"
+        android:layout_height="119dp"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.084" />
+        app:layout_constraintVertical_bias="0.094" />
 
     <Button
         android:id="@+id/button3"
@@ -88,10 +88,10 @@
         android:text="@string/editar_foto"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.566" />
+        app:layout_constraintVertical_bias="0.633" />
 
     <Button
         android:id="@+id/button2"
