@@ -122,6 +122,7 @@ public class ActivityPerfil extends AppCompatActivity {
                                                             Log.d(TAG, "User account deleted.");
                                                             mAuth.signOut();
                                                             startActivity(new Intent(ActivityPerfil.this, MainActivity.class));
+                                                            finish();
                                                         }
                                                     }
                                                 });

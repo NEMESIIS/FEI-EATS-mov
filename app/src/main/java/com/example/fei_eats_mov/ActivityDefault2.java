@@ -79,9 +79,8 @@ public class ActivityDefault2 extends AppCompatActivity {
         txtDulces.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registrar = new Intent(ActivityDefault2.this, ActivityDulces.class);
-                startActivity(registrar);
-                finish();
+                Intent intent = new Intent (v.getContext(), ActivityDulces.class);
+                startActivityForResult(intent, 0);
             }
         });
         //--Ver perfil imagen
@@ -90,9 +89,8 @@ public class ActivityDefault2 extends AppCompatActivity {
         imgDulces.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registrar = new Intent(ActivityDefault2.this, ActivityDulces.class);
-                startActivity(registrar);
-                finish();
+                Intent intent = new Intent (v.getContext(), ActivityDulces.class);
+                startActivityForResult(intent, 0);
             }
         });
         //---------Ver categoria Comida
@@ -101,9 +99,8 @@ public class ActivityDefault2 extends AppCompatActivity {
         txtComida.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registrar = new Intent(ActivityDefault2.this, ActivityComida.class);
-                startActivity(registrar);
-                finish();
+                Intent intent = new Intent (v.getContext(), ActivityComida.class);
+                startActivityForResult(intent, 0);
             }
         });
         //--Ver perfil imagen
@@ -112,9 +109,8 @@ public class ActivityDefault2 extends AppCompatActivity {
         imgComida.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registrar = new Intent(ActivityDefault2.this, ActivityComida.class);
-                startActivity(registrar);
-                finish();
+                Intent intent = new Intent (v.getContext(), ActivityComida.class);
+                startActivityForResult(intent, 0);
             }
         });
         //---------Ver categoria Todos
@@ -123,9 +119,8 @@ public class ActivityDefault2 extends AppCompatActivity {
         txtTodos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registrar = new Intent(ActivityDefault2.this, ActivityTodos.class);
-                startActivity(registrar);
-                finish();
+                Intent intent = new Intent (v.getContext(), ActivityTodos.class);
+                startActivityForResult(intent, 0);
             }
         });
         //--Ver perfil imagen
@@ -134,9 +129,8 @@ public class ActivityDefault2 extends AppCompatActivity {
         imgTodos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registrar = new Intent(ActivityDefault2.this, ActivityTodos.class);
-                startActivity(registrar);
-                finish();
+                Intent intent = new Intent (v.getContext(), ActivityTodos.class);
+                startActivityForResult(intent, 0);
             }
         });
         //Botón Regresar

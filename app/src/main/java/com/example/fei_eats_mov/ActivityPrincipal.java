@@ -37,9 +37,8 @@ public class ActivityPrincipal extends AppCompatActivity {
         txtPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registrar = new Intent(ActivityPrincipal.this, ActivityPerfil.class);
-                startActivity(registrar);
-                finish();
+                Intent intent = new Intent (v.getContext(), ActivityPerfil.class);
+                startActivityForResult(intent, 0);
             }
         });
         //--Ver perfil imagen
@@ -48,9 +47,8 @@ public class ActivityPrincipal extends AppCompatActivity {
         imageView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registrar = new Intent(ActivityPrincipal.this, ActivityPerfil.class);
-                startActivity(registrar);
-                finish();
+                Intent intent = new Intent (v.getContext(), ActivityPerfil.class);
+                startActivityForResult(intent, 0);
             }
         });
 
@@ -61,9 +59,8 @@ public class ActivityPrincipal extends AppCompatActivity {
         txtProducto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registrar = new Intent(ActivityPrincipal.this, ActivityProducto.class);
-                startActivity(registrar);
-                finish();
+                Intent intent = new Intent (v.getContext(), ActivityProducto.class);
+                startActivityForResult(intent, 0);
             }
         });
         //---agregar producto imagen
@@ -72,9 +69,8 @@ public class ActivityPrincipal extends AppCompatActivity {
         imageView7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registrar = new Intent(ActivityPrincipal.this, ActivityProducto.class);
-                startActivity(registrar);
-                finish();
+                Intent intent = new Intent (v.getContext(), ActivityProducto.class);
+                startActivityForResult(intent, 0);
             }
         });
         //-----ver vendedores texto
@@ -83,9 +79,8 @@ public class ActivityPrincipal extends AppCompatActivity {
         txtVendedores.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registrar = new Intent(ActivityPrincipal.this, ActivityDefault.class);
-                startActivity(registrar);
-                finish();
+                Intent intent = new Intent (v.getContext(), ActivityDefault.class);
+                startActivityForResult(intent, 0);
             }
         });
         //-----ver vendedores imagen
@@ -94,9 +89,8 @@ public class ActivityPrincipal extends AppCompatActivity {
         imageView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registrar = new Intent(ActivityPrincipal.this, ActivityDefault.class);
-                startActivity(registrar);
-                finish();
+                Intent intent = new Intent (v.getContext(), ActivityDefault.class);
+                startActivityForResult(intent, 0);
             }
         });
 
@@ -107,9 +101,8 @@ public class ActivityPrincipal extends AppCompatActivity {
         txtProductos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registrar = new Intent(ActivityPrincipal.this, ActivityDefault2.class);
-                startActivity(registrar);
-                finish();
+                Intent intent = new Intent (v.getContext(), ActivityDefault2.class);
+                startActivityForResult(intent, 0);
             }
         });
         //----Ver productos imagen
@@ -118,9 +111,8 @@ public class ActivityPrincipal extends AppCompatActivity {
         imageView6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registrar = new Intent(ActivityPrincipal.this, ActivityDefault2.class);
-                startActivity(registrar);
-                finish();
+                Intent intent = new Intent (v.getContext(), ActivityDefault2.class);
+                startActivityForResult(intent, 0);
             }
         });
 
