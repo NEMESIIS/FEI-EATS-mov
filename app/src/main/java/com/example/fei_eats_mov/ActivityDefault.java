@@ -39,7 +39,8 @@ public class ActivityDefault extends AppCompatActivity {
     private ArrayList<MensajeV> mMensajesList2 = new ArrayList<>();
     // private ProductoModelo mAdapter;
     private RecyclerView mRecyclerView2;
-   // private SearchView searchView;
+
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

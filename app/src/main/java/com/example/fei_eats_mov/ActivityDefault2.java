@@ -123,6 +123,7 @@ public class ActivityDefault2 extends AppCompatActivity {
                 startActivityForResult(intent, 0);
             }
         });
+
         //--Ver perfil imagen
         @SuppressLint("WrongViewCast") final ImageView imgTodos = findViewById(R.id.imgTodos);
 

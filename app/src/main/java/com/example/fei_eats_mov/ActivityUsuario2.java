@@ -39,6 +39,7 @@ public class ActivityUsuario2 extends AppCompatActivity {
     private SearchView searchView;
     private LinearLayoutManager lm;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

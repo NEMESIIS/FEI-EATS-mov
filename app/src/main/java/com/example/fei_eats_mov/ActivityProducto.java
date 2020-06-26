@@ -189,6 +189,7 @@ public class ActivityProducto extends AppCompatActivity {
         map.put("Categoria", categoriaP);
         map.put("fotoProductoURL", fotou);
 
+
         dReference.child("Productos").child(id_producto).setValue(map);
     }
 

@@ -9,6 +9,7 @@ public class Usuario {
     public String contrasena;
     public String rol;
 
+
     public Usuario (){
 //--
     }

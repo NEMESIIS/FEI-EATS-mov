@@ -104,6 +104,7 @@ public class ActivityPrincipal extends AppCompatActivity {
                 Intent intent = new Intent (v.getContext(), ActivityDefault2.class);
                 startActivityForResult(intent, 0);
             }
+
         });
         //----Ver productos imagen
         @SuppressLint("WrongViewCast") final ImageView imageView6 = findViewById(R.id.imageView6);

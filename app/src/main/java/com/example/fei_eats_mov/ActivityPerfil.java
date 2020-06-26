@@ -101,6 +101,7 @@ public class ActivityPerfil extends AppCompatActivity {
         });
     }
 
+
     public void deleteUser() {
         mAuth = FirebaseAuth.getInstance();
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ActivityPerfil.this);
