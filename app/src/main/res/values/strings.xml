@@ -15,7 +15,7 @@
 
     <string name="foto_de_producto">FOTO DE PERFIL</string>
     <string name="foto_de_vendedor">FOTO DE VENDEDOR</string>
-    <string name="texto_registro">Registrate</string>
+    <string name="texto_registro">Regístrate, es gratis!</string>
     <string name="prompt_password">Contraseña</string>
     <string name="action_sign_in_short">signin</string>
     <string name="prompt_email">Correo electrónico</string>
@@ -29,6 +29,6 @@
     <string name="text_telefono">Telefono</string>
     <string name="text_usuario">Correo electrónico</string>
     <string name="nombre_completo">Nombre Completo</string>
-    <string name="bonton_registrar">Registrarse</string>
-    <string name="entrar">Entrar</string>
+    <string name="bonton_registrar">Regístrate</string>
+    <string name="entrar">Iniciar Sesión</string>
 </resources>
