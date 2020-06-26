@@ -88,7 +88,17 @@ public class ActivityPerfil extends AppCompatActivity {
                 deleteUser();
             }
         });
+        //Botón Regresar
+        final Button  btnRegresar2 = findViewById(R.id.regresarpri);
 
+        btnRegresar2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registrar = new Intent(ActivityPerfil.this, ActivityPrincipal.class);
+                startActivity(registrar);
+                finish();
+            }
+        });
     }
 
     public void deleteUser() {
@@ -136,5 +146,7 @@ public class ActivityPerfil extends AppCompatActivity {
                     }
                 }).create().show();
     }
+
+    //
 
 }

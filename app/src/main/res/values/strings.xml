@@ -13,7 +13,7 @@
         <item>Comida</item>
     </string-array>
 
-    <string name="foto_de_producto">FOTO DE PERFIL</string>
+    <string name="foto_de_producto">INGRESA FOTO DE PERFIL</string>
     <string name="foto_de_vendedor">FOTO DE VENDEDOR</string>
     <string name="texto_registro">Regístrate, es gratis!</string>
     <string name="prompt_password">Contraseña</string>
