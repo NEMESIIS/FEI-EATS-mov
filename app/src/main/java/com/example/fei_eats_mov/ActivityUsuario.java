@@ -144,7 +144,7 @@ public class ActivityUsuario extends AppCompatActivity {
 
         if (requestCode == GALLERY_INTENT && resultCode == RESULT_OK) {
             Uri uri = data.getData ( );
-            StorageReference filePath = dStorage.child ("fotosProductos").child (uri.getLastPathSegment ( ));
+            StorageReference filePath = dStorage.child ("fotosPerfil").child (uri.getLastPathSegment ( ));
 
             filePath.putFile (uri).addOnSuccessListener (new OnSuccessListener<UploadTask.TaskSnapshot>( ) {
                 @Override
@@ -186,7 +186,7 @@ public class ActivityUsuario extends AppCompatActivity {
                     map.put("Correo", correo);
                     map.put("Contrasena", contrasena);
                     map.put("Nombre", nombre);
-                    map.put("fotoPerfilURL",urlFoto);
+                    map.put("fotoPerfilURL",fotou);
                     map.put("rol",rol1);
 
                     String id = mAuth.getCurrentUser().getUid();
