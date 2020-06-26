@@ -2,7 +2,7 @@ package com.example.fei_eats_mov.productos;
 
 public class MensajeV {
     private  String nombre;
-    private String usuario;
+    private String correo;
     private String celular;
 
     //Clase constructora
@@ -10,9 +10,9 @@ public class MensajeV {
     public MensajeV(String nombre){
 
     }
-    public MensajeV(String nombre, String usuario, String celular){
+    public MensajeV(String nombre, String correo, String celular){
         this.nombre=nombre;
-        this.usuario=usuario;
+        this.correo=correo;
         this.celular=celular;
     }
 
@@ -24,12 +24,12 @@ public class MensajeV {
         this.nombre = nombre;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setCorreo(String usuario) {
+        this.correo = usuario;
     }
 
     public String getCelular() {

@@ -33,6 +33,8 @@ public class ActivityProducto extends AppCompatActivity {
     private EditText etNombreP;
     private EditText etPrecioP;
     private EditText etDescripcionP;
+    private EditText etVendedorx;
+    private EditText etCelularx;
     private Spinner spCategoriaP;
     private Button btnRegistrarP,btnFotoP;
     private final int GALLERY_INTENT = 1;
@@ -45,6 +47,8 @@ public class ActivityProducto extends AppCompatActivity {
     private String descripcionP = "";
     private String categoriaP ="";
     private String id_usaurio="";
+    private String vendedorx="";
+    private String celularx="";
     String fotou;
 
     //VARIABLES DE FIREBASE
@@ -67,6 +71,8 @@ public class ActivityProducto extends AppCompatActivity {
         etNombreP = findViewById(R.id.etNombreP);
         etPrecioP = findViewById(R.id.etPrecioP);
         etDescripcionP = findViewById(R.id.etDescripcionP);
+        etVendedorx = findViewById(R.id.etVdendedorx);
+        etCelularx = findViewById(R.id.etCelularx);
 
         spCategoriaP = findViewById(R.id.spCategoriaP);
         btnRegistrarP = findViewById(R.id.btnRegistrarP);
@@ -99,11 +105,13 @@ public class ActivityProducto extends AppCompatActivity {
                 nombreP = etNombreP.getText().toString();
                 precioP = etPrecioP.getText().toString();
                 descripcionP = etDescripcionP.getText().toString();
+                vendedorx = etVendedorx.getText().toString();
+                celularx = etCelularx.getText().toString();
                 categoriaP = spCategoriaP.getSelectedItem().toString();
 
               //  id_usaurio = dDatabase.getReference ("Usuarios").child(user.getUid()).toString();
 
-                if(nombreP.isEmpty() || precioP.isEmpty() || descripcionP.isEmpty()){
+                if(nombreP.isEmpty() || precioP.isEmpty() || descripcionP.isEmpty() ||vendedorx.isEmpty()|| celularx.isEmpty()){
                     validarDatos();
 
                 }else {
@@ -213,6 +221,9 @@ public class ActivityProducto extends AppCompatActivity {
         map.put("ID_usuario", id_usaurio);
         map.put("Nombre Producto", nombreP);
         map.put("Precio Producto", precioP);
+        map.put("Vendedor",vendedorx);
+        map.put("Celular",celularx);
+        map.put("Rol","Vendedor");
         map.put("descripcion", descripcionP);
         map.put("Categoria", categoriaP);
         map.put("fotoProductoURL", fotou);
@@ -243,6 +254,14 @@ public class ActivityProducto extends AppCompatActivity {
 
         if(descripcionP.isEmpty()){
             etDescripcionP.setError("Requerido");
+        }
+
+        if (vendedorx.isEmpty()){
+            etVendedorx.setError("Requerido");
+        }
+
+        if (celularx.isEmpty()){
+            etCelularx.setError("Requerido");
         }
     }
 }

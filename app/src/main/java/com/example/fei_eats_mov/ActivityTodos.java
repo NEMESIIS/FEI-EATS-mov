@@ -37,8 +37,6 @@ public class ActivityTodos extends AppCompatActivity {
     // private ProductoModelo mAdapter;
     private RecyclerView mRecyclerView;
 
-   // private SlideshowViewModel slideshowViewModel;
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

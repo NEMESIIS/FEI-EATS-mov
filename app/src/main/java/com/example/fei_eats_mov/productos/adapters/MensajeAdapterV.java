@@ -1,17 +1,14 @@
 package com.example.fei_eats_mov.productos.adapters;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fei_eats_mov.R;
-
 import com.example.fei_eats_mov.productos.MensajeV;
 
 import java.util.ArrayList;
@@ -37,14 +34,11 @@ public class MensajeAdapterV extends RecyclerView.Adapter<MensajeAdapterV.ViewHo
         MensajeV mensajev = mensajesList2.get(index);
 
         viewHolderv.textViewMensajeV1.setText(mensajev.getNombre());
-        viewHolderv.textViewMensajeV2.setText(mensajev.getUsuario());
+        viewHolderv.textViewMensajeV2.setText(mensajev.getCorreo());
         viewHolderv.textViewMensajeV3.setText(mensajev.getCelular());
 
 
-
-
     }
-
 
 
     @Override
@@ -53,10 +47,9 @@ public class MensajeAdapterV extends RecyclerView.Adapter<MensajeAdapterV.ViewHo
     }
 
 
-
     public class  ViewHolder extends RecyclerView.ViewHolder{
         //Contexto
-        Context context;
+
 
         private TextView textViewMensajeV1;
         private TextView textViewMensajeV2;
@@ -71,7 +64,7 @@ public class MensajeAdapterV extends RecyclerView.Adapter<MensajeAdapterV.ViewHo
             super(view2);
             this.view2 = view2;
             //Para el botón - llamada
-            context = view2.getContext();
+
             this.textViewMensajeV1 = view2.findViewById(R.id.textViewMensajeV1);
             this.textViewMensajeV2 = view2.findViewById(R.id.textViewMensajeV2);
             this.textViewMensajeV3 = view2.findViewById(R.id.textViewMensajeV3);

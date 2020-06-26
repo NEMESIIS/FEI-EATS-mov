@@ -39,10 +39,8 @@ public class ActivityDefault extends AppCompatActivity {
     private RecyclerView mRecyclerView2;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //para menú contextual
-
         setContentView(R.layout.activity_usuarios);
         mRecyclerView2 = findViewById(R.id.recyclerViewVendedores);
 
@@ -75,13 +73,13 @@ public class ActivityDefault extends AppCompatActivity {
                 if (dataSnapshot.exists()) {
 
                     for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                        String nombre = ds.child("nombre").getValue().toString();
-                        String usuario = ds.child("usuario").getValue().toString();
-                        String celular = ds.child("celular").getValue().toString();
+                        String nombre = ds.child("Nombre").getValue().toString();
+                        String correo = ds.child("Correo").getValue().toString();
+                        String celular = ds.child("Telefono").getValue().toString();
                         //--Aquí va el apartado de la imagen
 
 
-                        mMensajesList2.add(new MensajeV("Nombre:  "+nombre,"Usuario:  "+usuario,"Celular:  "+celular));
+                        mMensajesList2.add(new MensajeV("Nombre:  "+nombre,"Correo:  "+correo,"Celular:  "+celular));
 
                     }
 
