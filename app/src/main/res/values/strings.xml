@@ -13,6 +13,22 @@
         <item>Comida</item>
     </string-array>
 
-    <string name="foto_de_producto">FOTO DE PRODUCTO</string>
+    <string name="foto_de_producto">FOTO DE PERFIL</string>
     <string name="foto_de_vendedor">FOTO DE VENDEDOR</string>
+    <string name="texto_registro">Registrate</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in_short">signin</string>
+    <string name="prompt_email">Correo electrónico</string>
+    <string name="welcome">wel</string>
+    <string name="login_failed">fail</string>
+    <string name="invalid_username">inva</string>
+    <string name="invalid_password">passinva</string>
+    <string name="text_contrasena">Contraseña</string>
+    <string name="crear_cuenta">Crear una cuenta</string>
+    <string name="text_login">Inicia sesión</string>
+    <string name="text_telefono">Telefono</string>
+    <string name="text_usuario">Correo electrónico</string>
+    <string name="nombre_completo">Nombre Completo</string>
+    <string name="bonton_registrar">Registrarse</string>
+    <string name="entrar">Entrar</string>
 </resources>

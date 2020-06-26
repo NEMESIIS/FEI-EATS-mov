@@ -11,15 +11,19 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.fei_eats_mov.login.MainActivity;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 
 public class ActivityPrincipal extends AppCompatActivity {
 
     private DatabaseReference ddulces;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mAuth = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_principal);
 
 
@@ -127,9 +131,10 @@ public class ActivityPrincipal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent registrar = new Intent(ActivityPrincipal.this, MainActivity.class);
-                startActivity(registrar);
-                finish();
-            }
+                    mAuth.signOut();
+                    startActivity(new Intent(ActivityPrincipal.this, MainActivity.class));
+                    finish();
+                }
         });
 
     }
