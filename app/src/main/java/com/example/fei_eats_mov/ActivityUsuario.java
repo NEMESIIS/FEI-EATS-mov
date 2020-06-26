@@ -202,7 +202,7 @@ public class ActivityUsuario extends AppCompatActivity {
                         }
                     });
                 }else{
-                    Toast.makeText(ActivityUsuario.this, "No se pudo registrar el usuario", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ActivityUsuario.this, "No se pudo registrar el usuario, intenta con otro correo", Toast.LENGTH_LONG).show();
                 }
             }
         });
