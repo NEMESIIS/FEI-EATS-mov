@@ -8,6 +8,7 @@ import com.example.fei_eats_mov.login.LoggedInUserView;
  * Authentication result : success (user details) or error message.
  */
 class LoginResult {
+
     @Nullable
     private LoggedInUserView success;
     @Nullable

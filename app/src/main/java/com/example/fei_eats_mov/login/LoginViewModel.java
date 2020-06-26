@@ -11,6 +11,7 @@ import com.example.fei_eats_mov.R;
 
 public class LoginViewModel extends ViewModel {
 
+
     private MutableLiveData<LoginFormState> loginFormState = new MutableLiveData<>();
     private MutableLiveData<LoginResult> loginResult = new MutableLiveData<>();
     private LoginRepository loginRepository;

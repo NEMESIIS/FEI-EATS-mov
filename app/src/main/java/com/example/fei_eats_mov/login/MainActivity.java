@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override
             public void onChanged(@Nullable LoginFormState loginFormState) {

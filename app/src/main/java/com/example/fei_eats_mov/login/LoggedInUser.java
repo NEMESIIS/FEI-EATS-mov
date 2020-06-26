@@ -11,6 +11,7 @@ public class LoggedInUser {
     public LoggedInUser(String userId, String displayName) {
         this.userId = userId;
         this.displayName = displayName;
+
     }
 
     public String getUserId() {

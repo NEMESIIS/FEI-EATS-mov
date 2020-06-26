@@ -15,6 +15,7 @@ import com.example.fei_eats_mov.login.LoginViewModel;
  */
 public class LoginViewModelFactory implements ViewModelProvider.Factory {
 
+
     @NonNull
     @Override
     @SuppressWarnings("unchecked")

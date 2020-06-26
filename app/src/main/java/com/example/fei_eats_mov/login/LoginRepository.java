@@ -7,6 +7,7 @@ package com.example.fei_eats_mov.login;
  */
 public class LoginRepository {
 
+
     private static volatile LoginRepository instance;
 
     private LoginDataSource dataSource;

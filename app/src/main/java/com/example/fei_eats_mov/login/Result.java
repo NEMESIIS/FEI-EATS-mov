@@ -8,6 +8,7 @@ public class Result<T> {
     private Result() {
     }
 
+
     @Override
     public String toString() {
         if (this instanceof Result.Success) {
