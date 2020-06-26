@@ -4,7 +4,7 @@ public class MensajeV {
     private  String nombre;
     private String correo;
     private String celular;
-
+//--
     //Clase constructora
 
     public MensajeV(String nombre){

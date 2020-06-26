@@ -37,7 +37,7 @@ public class MensajeAdapter extends RecyclerView.Adapter<MensajeAdapter.ViewHold
         viewHolder.textViewMensaje2.setText(mensaje.getPrecio());
         viewHolder.textViewMensaje3.setText(mensaje.getDescripcion());
     }
-
+//--
     @Override
     public int getItemCount() {
         return mensajesList.size();

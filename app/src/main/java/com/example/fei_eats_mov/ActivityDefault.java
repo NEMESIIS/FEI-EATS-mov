@@ -77,7 +77,7 @@ public class ActivityDefault extends AppCompatActivity {
                         String correo = ds.child("Correo").getValue().toString();
                         String celular = ds.child("Telefono").getValue().toString();
                         //--Aquí va el apartado de la imagen
-
+//---
 
                         mMensajesList2.add(new MensajeV("Nombre:  "+nombre,"Correo:  "+correo,"Celular:  "+celular));
 

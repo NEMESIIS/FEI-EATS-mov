@@ -10,7 +10,7 @@ public class Usuario {
     public String rol;
 
     public Usuario (){
-
+//--
     }
 
     public Usuario(String userid, String nombre, String correo, String usuario, String celular, String contrasena, String rol){
