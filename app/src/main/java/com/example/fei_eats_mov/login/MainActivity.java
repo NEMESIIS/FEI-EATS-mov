@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,10 +18,12 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.fei_eats_mov.ActivityInformacion;
 import com.example.fei_eats_mov.ActivityPrincipal;
 import com.example.fei_eats_mov.ActivityProducto;
 import com.example.fei_eats_mov.ActivityUsuario;
@@ -150,6 +153,19 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        //-------------Botón de información
+        //---agregar producto imagen
+        @SuppressLint("WrongViewCast") final ImageView imageView7 = findViewById(R.id.info);
+
+        imageView7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registrar = new Intent(MainActivity.this, ActivityInformacion.class);
+                startActivity(registrar);
+                finish();
+            }
+        });
+        //------------Fin de botón de información
     }
 
     private void updateUiWithUser(LoggedInUserView model) {

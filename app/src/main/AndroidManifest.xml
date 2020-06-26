@@ -30,6 +30,8 @@
         <activity android:name=".ActivityDulces"/>
         <activity android:name=".ActivityComida"/>
         <activity android:name=".ActivityTodos"/>
+        <activity android:name=".ActivityPrincipal2"/>
+        <activity android:name=".ActivityInformacion"/>
 
 
     </application>
