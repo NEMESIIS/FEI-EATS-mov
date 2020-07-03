@@ -79,23 +79,23 @@
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view"
         app:layout_constraintVertical_bias="0.094"
-        android:contentDescription="@string/todo" />
+        android:contentDescription="@string/fotoperfil" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="94dp"
         android:layout_height="17dp"
         android:autoSizeTextType="uniform"
-        android:background="@null"
+        android:background="#3700B3"
         android:text="@string/editar_foto"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.665"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.67" tools:targetApi="o" />
+        app:layout_constraintVertical_bias="0.67" />
 
     <Button
         android:id="@+id/button2"

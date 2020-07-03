@@ -85,7 +85,57 @@ public class ActivityPerfil extends AppCompatActivity {
         eliminarUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                deleteUser();
+                mAuth = FirebaseAuth.getInstance();
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ActivityPerfil.this);
+
+                // Configura el titulo.
+                alertDialogBuilder.setTitle("¿Deseas eliminar tu perfil?");
+
+                // Configura el mensaje.
+                alertDialogBuilder
+                        .setMessage("Al dar click en si, ya no tendrás acceso a tu cuenta y perderas todos tus productos ")
+                        .setCancelable(false)
+                        .setPositiveButton("Si",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                //Si la respuesta es afirmativa se procede a eliminar la autenticación
+                                final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+                                // Obtiene credenciales de autenticación del usuario para volver a autenticarse.
+                                AuthCredential credential = EmailAuthProvider.getCredential("user@example.com", "password1234");
+
+                                user.reauthenticate(credential)
+                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                user.delete()
+                                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                            @Override
+                                                            public void onComplete(@NonNull Task<Void> task) {
+                                                                if (task.isSuccessful()) {
+                                                                    Log.d(TAG, "User account deleted.");
+                                                                    mAuth.signOut();
+                                                                    startActivity(new Intent(ActivityPerfil.this, MainActivity.class));
+                                                                    finish();
+                                                                }
+                                                            }
+                                                        });
+
+                                            }
+                                        });
+                            }
+                        })
+                        .setNegativeButton("No",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                dialog.cancel();
+                            }
+                        }).create().show();
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ActivityPerfil.this, EditarActivity.class));
             }
         });
         //Botón Regresar
@@ -99,55 +149,19 @@ public class ActivityPerfil extends AppCompatActivity {
                 finish();
             }
         });
+
+        // boton para editar foto de perfil
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (v.getContext(), EditarFoto.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 
 
-    public void deleteUser() {
-        mAuth = FirebaseAuth.getInstance();
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ActivityPerfil.this);
 
-        // Configura el titulo.
-        alertDialogBuilder.setTitle("¿Deseas eliminar tu perfil?");
-
-        // Configura el mensaje.
-        alertDialogBuilder
-                .setMessage("Al dar click en si, ya no tendrás acceso a tu cuenta y perderas todos tus productos ")
-                .setCancelable(false)
-                .setPositiveButton("Si",new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog,int id) {
-                        //Si la respuesta es afirmativa se procede a eliminar la autenticación
-                        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-                        // Obtiene credenciales de autenticación del usuario para volver a autenticarse.
-                        AuthCredential credential = EmailAuthProvider.getCredential("user@example.com", "password1234");
-
-                        user.reauthenticate(credential)
-                                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<Void> task) {
-                                        user.delete()
-                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                    @Override
-                                                    public void onComplete(@NonNull Task<Void> task) {
-                                                        if (task.isSuccessful()) {
-                                                            Log.d(TAG, "User account deleted.");
-                                                            mAuth.signOut();
-                                                            startActivity(new Intent(ActivityPerfil.this, MainActivity.class));
-                                                            finish();
-                                                        }
-                                                    }
-                                                });
-
-                                    }
-                                });
-                    }
-                })
-                .setNegativeButton("No",new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog,int id) {
-                        dialog.cancel();
-                    }
-                }).create().show();
-    }
 
     //
 
